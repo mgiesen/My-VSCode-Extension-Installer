@@ -17,5 +17,5 @@ The script performs the following steps:
 To use the script, clone the repository and run the script in a Bash environment. Confirm the installation of the extensions by pressing 'Enter'.
 
 ```bash
-./install_vscode_extensions.sh
+./installer.sh
 ```
