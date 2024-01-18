@@ -26,6 +26,7 @@ extensions=(
   "esbenp.prettier-vscode"
   "bierner.markdown-mermaid"
   "EditorConfig.EditorConfig"
+  "mechatroner.rainbow-csv"
 )
 
 for extension in "${extensions[@]}"
