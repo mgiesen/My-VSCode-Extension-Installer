@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo
-echo "Folgende Erweiterungen sind bereits installiert:"
+echo "The following extensions are already installed:"
 echo
 
-# Aufzählung der bereits installierten Erweiterungen
+# Listing already installed extensions
 extensions=($(code --list-extensions))
 
 for extension in "${extensions[@]}"
@@ -12,10 +12,10 @@ do
   echo "- $extension"
 done
 echo
-echo "Moechtest du folgende Erweiterungen installieren?"
+echo "Would you like to install the following extensions?"
 echo
 
-# Liste der gewünschten Erweiterungen
+# List of desired extensions
 extensions=(
   "SimonSiefke.svg-preview" 
   "ritwickdey.LiveServer" 
@@ -34,23 +34,22 @@ do
 done
 
 echo
-echo "Fortfahren mit 'Enter'"
+echo "Proceed by pressing 'Enter'"
 read -r
 
 echo
 
-# Erweiterungen installieren
+# Installing extensions
 for extension in "${extensions[@]}"
 do
-  echo "Installiere Erweiterung: $extension"
+  echo "Installing extension: $extension"
   code --install-extension "$extension"
   if [ $? -ne 0 ]; then
-    echo "Fehler beim Installieren der Erweiterung: $extension"
+    echo "Error installing extension: $extension"
   else
-    echo "Erweiterung erfolgreich installiert: $extension"
+    echo "Extension successfully installed: $extension"
   fi
 done
 
 echo
-echo "Die Installation ist abgeschlossen"
-
+echo "Installation is complete"
